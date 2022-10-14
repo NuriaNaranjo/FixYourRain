@@ -1,47 +1,53 @@
 # Ordena tu lluvia
 ![](header.png)
 
-## 1. Prepara los datos de entrada
-* Crea un CSV en tu programa de Hojas de Cálculo o descarga el archivo de muestra (ordenatulluvia_misdatos.csv)
-* Copia y pega los datos originales según las siguientes columnas:
+## Aim
+"Ordena tu lluvia" is a simple tool, built under free R code, whose main objective is to facilitate the organization of precipitation data downloaded or requested from the Spanish Meteorological Agency (AEMET).
+
+## Motivation
+The daily precipitation data provided by AEMET is delivered in a file/spreadsheet where each day of the month occupies a different column in a spreadsheet.
+Ususally, the users, for treatment or analysis, organize the data with daily dates continuously, and each AEMET rain gauge occupying a column.
+Runing "Ordena tu lluvia" tool, make possible to carry out these changes of format with a minimum investment of time and zero cost of economic resources.
+
+## 1. Organize input data 
+* Create a CSV in your Spreadsheet program or download the sample file (orderatulluvia_misdatos.csv).
+
+* Copy and paste the original data according to the following columns: 
  
-Columna A (INDICATIVO): el nombre de la estación no debe comenzar por un número. Es conveniente renombrar aquellas estaciones que comienzan su código por un número utilizando la herramienta de Excel “concatenar” (o la herramienta similar en el software que estes utilizando) y añadiendo alguna letra delante del nombre de la estación. 
+Column A (INDICATIVO): the name of the rain gauge must not begin with a number. It is convenient to rename those stations that start their code with a number using the Excel “concatenate” tool (or the similar tool in the software you are using) and adding a letter before the station name. 
 
-Columnas B y C (ANO y MES): se refiere al año y mes de medida.
+Columns B and C (ANO and MES):refers to the year and month of measurement. 
 
-Columnas de la D a la AH: contienen la información de la precipitación de AEMET de los días 1 a 31 del mes. (Nota: No modificar los datos originales, dejando los huecos en los días 29,30 y 31 para el mes de febrero; y día 31 para abril, junio, septiembre y noviembre.)
+Columns from D to AH: contains the information of RAIN GAUGES from AEMET, day 1 to 31. (Note: do not fill the gaps in days 29,30 or 31 when are empty).
 
+## 2. Download and Install R y RStudio
+* Download and Install R: (<https://cran.r-project.org/bin/windows/base/>)
+* Download and Install RStudio Deskstop: (<https://www.rstudio.com/products/rstudio/>)
 
-## 2. Descarga e instala R y RStudio
-* Descarga e instala R: (<https://cran.r-project.org/bin/windows/base/>)
-* Descarga e instala RStudio Deskstop: (<https://www.rstudio.com/products/rstudio/>)
+## 3. Download the script from this repository
+*	Download the script of this repository and save it on a known directory.
+*	Both, the script and input data must be on the same directory.
 
-## 3. Descarga el script del repositorio
-*	Descarga en script del repositorio GitHub y guárdalo en un directorio conocido en tu equipo.
-*	Asegúrate que el script y los datos de entrada se encuentran en el mismo directorio.
+## 4. Start RStudio and run the script
 
-## 4. Inicia RStudio y ejecuta el script
+*	Start the script Ordenatulluvia: File > OpenFile and select Ordenatulluvia.R
+*	Before running the script, change the directory of your files at row 24 > setwd C:/Users/miequipo/Documents/  *(read below)
 
-*	Abre el script Ordenatulluvia: File  OpenFile  y selecciona Ordenatulluvia.R
-*	Antes de ejecutar el script, asegúrate de cambiar en la fila 19 el directorio del archivo de los datos de entrada: p.e. setwd C:/Users/miequipo/Documents/*&**
+___*Be sure that the link use this separator “/” and no “\”___
 
-_*Para saber cuál es el directorio de la carpeta en la que están guardados los datos, búscala, haz clic con el botón derecho del ratón sobre la carpeta y selecciona Propiedades. Busca la Ubicación de la carpeta y copia y pega en la línea._
+*	Run the script
+*	Output data could be found on selected directory as a .csv file.
 
-_**Es importante comprobar que el separador de directorios es “/” y no “\” que es el separador por defecto._
+## 5. Check output data
 
-*	Ejecuta el script línea por línea, haciendo clic sobre Run
-*	Los datos de salida podrás encontrarlos en un archivo .csv en el directorio que has indicado en la fila 19.
+Take in account the output data have been transformated following these chenges:
+*	Data relocated in columns.
+*	Units changed: from thents of mm to mm.
+*	Negative data have been replace by 0.
 
-## 5. Comprueba los datos de salida
+## 6.	Treat output data to be able to explore and explote it
 
-Ten en cuenta que los datos de salida habrán sufrido tres importantes transformaciones:
-*	Colocación de los datos de filas a columnas
-*	Cambio de unidades: los datos originales de AEMET vienen expresados en décimas de mm y los datos de salida ya están transformados a mm.
-*	Eliminación de los datos negativos: como la precipitación no puede ser negativa, se ha incluido en el script un bucle que transforma los datos negativos en cero.
-
-## 6.	Transforma los datos de salida para poder tratarlos y explorarlos 
-
-Si tu equipo está en castellano, para no tener problemas con el formato del separador decimal (punto o coma), ten en cuenta que puedes modificar el separador decimal en cualquier hoja de cálculo o procesador de textos (bloc de notas).
+Remember to check decimal separators on your settings (periods or commas). Also you can replace it masivement on Notepad. 
 
 
 ## Contributor
