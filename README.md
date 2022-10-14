@@ -2,7 +2,7 @@
 ![](header.png)
 
 ## 1. Prepara los datos de entrada
-* Crea un CSV en tu programa de Hojas de Cálculo (leer * más abajo) o descarga el archivo de muestra (ordenatulluvia_misdatos.csv)
+* Crea un CSV en tu programa de Hojas de Cálculo o descarga el archivo de muestra (ordenatulluvia_misdatos.csv)
 * Copia y pega los datos originales según las siguientes columnas:
  
 Columna A (INDICATIVO): el nombre de la estación no debe comenzar por un número. Es conveniente renombrar aquellas estaciones que comienzan su código por un número utilizando la herramienta de Excel “concatenar” (o la herramienta similar en el software que estes utilizando) y añadiendo alguna letra delante del nombre de la estación. 
