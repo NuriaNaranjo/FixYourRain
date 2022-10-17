@@ -1,24 +1,24 @@
-# Ordena tu lluvia
+# FixYourRain
 ![](header.png)
 
 ## Aim
-"Ordena tu lluvia" is a simple tool, built under free R code, whith main goal to facilitate the organization of precipitation data downloaded or requested from the Spanish Meteorological Agency (AEMET).
+"FixYourRain" is a simple tool, built under free R code, whith main goal to facilitate the organization of precipitation data downloaded or requested from the Spanish Meteorological Agency (AEMET).
 
 ## Motivation
 The daily precipitation data provided by AEMET is delivered in a file/spreadsheet where each day of the month occupies a different column in a spreadsheet.
 Ususally, the users, for treatment or analysis, organize the data with daily dates continuously, and each AEMET rain gauge occupying a column.
-Runing "Ordena tu lluvia" tool, make possible to carry out these changes of format with a minimum investment of time and zero cost of economic resources.
+Runing "FixYourRain" tool, make possible to carry out these changes of format with a minimum investment of time and zero cost of economic resources.
 
 ## 1. Organize input data 
-* Create a CSV in your Spreadsheet program or download the sample file (orderatulluvia_misdatos.csv).
+* Create a CSV in your Spreadsheet program or download the sample file (precipitation_to_fix.csv).
 
 * Copy and paste the original data according to the following columns: 
  
-Column A (INDICATIVO): the name of the rain gauge must not begin with a number. It is convenient to rename those stations that start their code with a number using the Excel “concatenate” tool (or the similar tool in the software you are using) and adding a letter before the station name. 
+Column 1 (INDICATIVO): the name of the rain gauge must not begin with a number. It is convenient to rename those stations that start their code with a number using the Excel “concatenate” tool (or the similar tool in the software you are using) and adding a letter before the station name. 
 
-Columns B and C (ANO and MES):refers to the year and month of measurement. 
+Columns 2 and 3 (ANO and MES):refers to the year and month of measurement. 
 
-Columns from D to AH: contains the information of RAIN GAUGES from AEMET, day 1 to 31. (Note: do not fill the gaps in days 29,30 or 31 when are empty).
+Columns from 4 to 34: contains the information of RAIN GAUGES from AEMET, day 1 to 31. (Note: do not fill the gaps in days 29,30 or 31 when are empty).
 
 ## 2. Download and Install R y RStudio
 * Download and Install R: (<https://cran.r-project.org/bin/windows/base/>)
@@ -30,7 +30,7 @@ Columns from D to AH: contains the information of RAIN GAUGES from AEMET, day 1 
 
 ## 4. Start RStudio and run the script
 
-*	Start the script Ordenatulluvia: File > OpenFile and select Ordenatulluvia.R
+*	Start the script FixYourRain: File > OpenFile and select FixYourRain.R
 *	Before running the script, change the directory of your files at row 24 > setwd C:/Users/miequipo/Documents/  *(read below)
 
 ___*Be sure that the link use this separator “/” and no “\”___
@@ -42,7 +42,7 @@ ___*Be sure that the link use this separator “/” and no “\”___
 
 Take in account the output data have been transformated following these chenges:
 *	Data relocated in columns.
-*	Units changed: from thents of mm to mm.
+*	Units changed: from tenths of mm to mm.
 *	Negative data have been replace by 0.
 
 ## 6.	Treat output data to be able to explore and explote it
