@@ -2,7 +2,11 @@
 ![](header.png)
 
 ## Aim
-"FixYourRain" is a simple tool, built under free R code, whith main goal to facilitate the organization of precipitation data downloaded or requested from the Spanish Meteorological Agency (AEMET; <https://www.aemet.es/es/portada>).
+"FixYourRain" is a simple tool, built under free R code, whith main goal to facilitate the organization of precipitation data downloaded or requested from the Spanish Meteorological Agency (AEMET).
+
+## Data Source
+
+Precipitation data sets requested from AEMET (<https://www.aemet.es/es/portada>).
 
 ## Motivation
 The daily precipitation data provided by AEMET is delivered in a file/spreadsheet where each day of the month occupies a different column in a spreadsheet.
