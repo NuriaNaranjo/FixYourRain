@@ -35,7 +35,7 @@ Columns from 4 to 34: contains the information of RAIN GAUGES from AEMET, day 1 
 ## 4. Start RStudio and run the script
 
 *	Start the script FixYourRain: File > OpenFile and select FixYourRain.R
-*	Before running the script, change the directory of your files at row 24 > setwd C:/Users/miequipo/Documents/  *(read below)
+*	Before running the script, change the directory of your files at row 12 > setwd C:/Users/miequipo/Documents/  *(read below)
 
 ___*Be sure that the link use this separator “/” and no “\”___
 
